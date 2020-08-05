@@ -7,21 +7,6 @@ def init_board(w=7, h=6):
     return [[None for i in range(0, w)] for j in range(0, h)]
 
 
-def whatever(w=3, h=3):
-    board = [[(i, j) for i in range(0, w)] for j in range(0, h)]
-    return board
-
-
-def index_board(w, h):
-    b = init_board(w, h)
-    count = 0
-    for i in range(h):
-        for j in range(w):
-            b[i][j] = count
-            count += 1
-    return b
-
-
 def render(board):
     print("  ", end="")
     for i in range(0, WIDTH):
