@@ -3,7 +3,7 @@ WIDTH, HEIGHT = 7, 6
 
 
 # BOARD AND RENDERING
-def init_board(w=3, h=3):
+def init_board(w=7, h=6):
     return [[None for i in range(0, w)] for j in range(0, h)]
 
 
