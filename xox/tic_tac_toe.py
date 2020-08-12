@@ -1,6 +1,7 @@
 import os, sys
 from t_board import *
 from ai import *
+import time as t
 
 WIDTH, HEIGHT = 3, 3
 
