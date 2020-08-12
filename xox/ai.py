@@ -28,28 +28,6 @@ def get_winning_move(board, char):
     return [False]
 
 
-def check_win(board):
-    cols, digs, win_flag, char = get_col_fam(board), get_dig_fam(board), False, None
-    for i in range(0, len(cols)):
-        if is_same(cols[i])[0]:
-            win_flag, char = True, is_same(cols[i])[1]
-        if is_same(board[i])[0]:
-            win_flag, char = True, is_same(board[i])[1]
-    for i in range(0, len(digs)):
-        if is_same(digs[i])[0]:
-            win_flag, char = True, is_same(digs[i])[1]
-    return [win_flag, char] if win_flag else [win_flag]
-
-
-def check_full(board):
-    full_flag = True
-    for i in range(0, len(board)):
-        for j in range(0, len(board[0])):
-            if board[i][j] is None:
-                full_flag = False
-    return full_flag
-
-
 def random_ai(board, char_1, char_2):
     poss_moves = get_valid_moves(board)
     random = rand.randrange(len(poss_moves))
