@@ -9,6 +9,9 @@ WIDTH, HEIGHT = 3, 3
 Example Uses: 
 
 python tic_tac_toe.py minimax_ai minimax_ai stats 1
+python tic_tac_toe.py minimax_ai minimax_ai game
+python tic_tac_toe.py random_ai minimax_ai game
+python tic_tac_toe.py win_ai win_lose_ai stats 100
 """
 # TODO Alpha-beta pruning
 # TODO  Create a function to get pre-calculated JSON list file of best moves to solve the time problem
