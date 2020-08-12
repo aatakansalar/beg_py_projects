@@ -1,5 +1,4 @@
 import os, sys
-import time as t
 from t_board import *
 from ai import *
 
