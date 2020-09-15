@@ -12,9 +12,8 @@ options: rand(regular), vnn, reprod(reproduction), immortal, load
 >> python life.py "vnn" 100 100
 >> python life.py "reprod" 100 100
 >> python life.py "immortal" 100 100
->> python life.py "load" "gosper_glider_gun.txt"
+>> python life.py "load" "file.txt "reg"
 
-Tutorial-Link:https://robertheaton.com/2018/07/20/project-2-game-of-life/
 """
 
 
@@ -215,4 +214,3 @@ if __name__ == "__main__":
             life(to_initial_state(sys.argv[2]), next_state_immortal)
         elif sys.argv[3] == "vnn":
             life(to_initial_state(sys.argv[2]), next_state_vnn)
-
