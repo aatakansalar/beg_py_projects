@@ -6,7 +6,7 @@ from colorama import init, deinit, Fore
 
 """
 USE INSTRUCTIONS
->> python ascii_gen_v1.py "lum" "image.jpg" "r" 4
+>> python ascii_gen_v1.py "avg" "final.jpg" "r" 24
 Method options: "lum" "avg" "light"
 Color Options: "r"(regular output) "red" "green" "blue" "dark"
 Dark mode inverts the brightness of the ascii output
@@ -56,11 +56,11 @@ def to_luminosity(string, tuple):
 # If no parameter is entered, default is used
 def asc_print(s, char):
     if s == "red":
-        print(Fore.RED, char, char,char, end="")
+        print(Fore.RED, char, char, end="")
     elif s == "green":
-        print(Fore.GREEN, char, char,char, end="")
+        print(Fore.GREEN, char, char, end="")
     elif s == "blue":
-        print(Fore.BLUE, char, char,char, end="")
+        print(Fore.BLUE, char, char, end="")
     elif s == "r":
         print(char, char,  end="")
 
@@ -88,6 +88,7 @@ img_arr = np.asarray(img_resized)
 
 
 if sys.argv[1] == "avg":
+    print("avg")
     for x in range(0, len(img_arr)):
         print("\n", end="")
         for y in range(0, len(img_arr[x])):
@@ -95,6 +96,7 @@ if sys.argv[1] == "avg":
             asc_print(sys.argv[3], char)
 
 elif sys.argv[1] == "light":
+    print("light")
     for x in range(0, len(img_arr)):
         print("\n", end="")
         for y in range(0, len(img_arr[x])):
@@ -102,6 +104,7 @@ elif sys.argv[1] == "light":
             asc_print(sys.argv[3], char)
 
 elif sys.argv[1] == "lum":
+    print("lum")
     for x in range(0, len(img_arr)):
         print("\n", end="")
         for y in range(0, len(img_arr[x])):
